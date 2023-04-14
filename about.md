@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "关于 Saltfish 咸鱼"
+title: "edgest.world"
 permalink: about
 ---
 

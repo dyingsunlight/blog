@@ -46,10 +46,10 @@ GitHub Actions 任务运行时可以正常的访问网络资源，但它本身�
 
 ##### 效果评测
 从连接效果上来看，无论和 ZeroTier 或者是 Tailscale 都能实现打洞直连不使用 relay 中转，实际网络性能测试可以达到 `250ms`/`50Mbps` 的水准，但延迟波动不稳定。
-![zero-tier](../assets/github-actions-free-rider/zero-tier.png)
-![tailscale.png](../assets/github-actions-free-rider/tailscale.png)
+![zero-tier](/assets/github-actions-free-rider/zero-tier.png)
+![tailscale.png](/assets/github-actions-free-rider/tailscale.png)
 
-![azure.jpg](../assets/github-actions-free-rider/azure-ip.jpg)
+![azure.jpg](/assets/github-actions-free-rider/azure-ip.jpg)
 
 遗憾的是，这个方法是无法在移动端使用。尽管 zerotier 和 tailscale 有提供 App 客户端，但是它们运行时需要占用 VPN 功能来实现组网。
 

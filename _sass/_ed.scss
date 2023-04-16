@@ -38,8 +38,8 @@ body {
 
 html {
   font-family: $main-font;
-  font-size: 1em; /* 16px; specify in ems to support text resizing in all browsers */
-  line-height: 1.5;
+  font-size: 1rem; /* 16px; specify in ems to support text resizing in all browsers */
+  line-height: 1.6;
 }
 
 @media (min-width: 38em) {
@@ -118,21 +118,34 @@ h1, h2, h3, h4, h5, h6 {
 
 h1,
 h1.text-title {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 h2 {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-}
-
-h3, h4, h5, h6 {
-  margin-top: 1rem;
-  font-size: 1rem;
+  margin-top: 1.3rem;
+  font-size: 1.4rem;
 }
 
 h3 {
-  margin-top: 1.5rem;
+  margin-top: 1.1rem;
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-weight: 700;
+}
+
+h5 {
+  font-weight: 600;
+}
+
+h6 {
+  font-weight: 500;
+}
+
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 
@@ -191,7 +204,7 @@ blockquote p:last-child {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
+  margin: 1rem 0 1rem 0;
   border-radius: 5px;
 }
 

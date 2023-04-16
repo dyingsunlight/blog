@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GitHub Actions 白嫖使用指南"
+title: "论如何更好的充分白嫖 GitHub Actions 指南"
 date: 2023-04-16 23:27:58 +0800
 ---
 
@@ -17,14 +17,21 @@ date: 2023-04-16 23:27:58 +0800
 GitHub Actions 任务运行时可以正常的访问网络资源，但它本身是不会被分配到公网 ip 的，这样就极大的限制了它的用途。
 根据不同的用途，接下来将详细介绍如何实现白嫖。
 
-### 警告
-***注意，本文仅从技术层面进行探讨各种可能实现方案从而帮助理解网络原理，请勿用于实际用途。***   
-***注意，Github 使用条款中明确声明 Github 可以无理由封禁任何账户。***
----
 
+
+### 风险警告
+***注意，本文仅从技术层面进行探讨各种可能实现方案从而帮助理解网络原理，请勿用于实际用途。***   
+***注意，GitHub 使用条款中明确声明 GitHub 可以[无理由封禁](https://docs.github.com/zh/site-policy/github-terms/github-terms-of-service#3-github-may-terminate)任何账户。***
+
+--------
+
+### GitHub 项目地址
+[Free-Rider](https://github.com/dyingsunlight/free-rider)
+~~免费的骑士~~
+
+---------
 ## 现在开始吧
-#### Github 项目地址
- [Free-Rider](https://github.com/dyingsunlight/free-rider)
+
 ### 示例
 #### 使用 Github Actions 代理上网 
 众所周知，代理请求上网对于连接和流量的消耗巨大。`Ngrok` 等一众工具不仅仅延迟高，而且被严格限制协议或者流量，明显它们已经无法适应新版本的环境，要寻找新的解决方案了。

@@ -1,7 +1,5 @@
 ---
-layout: page
-title: "关于网站"
-permalink: about
+layout: article
 ---
 
 #### 相关链接

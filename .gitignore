@@ -1,6 +1,10 @@
-_site
-.idea
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.DS_Store
+

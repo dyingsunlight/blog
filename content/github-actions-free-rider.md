@@ -1,18 +1,15 @@
 ---
-layout: post
-title: "论如何更好的充分白嫖 GitHub Actions 指南"
-date: 2023-04-16 23:27:58 +0800
+layout: article
 ---
 
 ## 序言
-
 简单概况来说
-[GitHub Actions](https://docs.github.com/zh/actions/learn-github-actions/understanding-github-actions) 
+[GitHub Actions](https://docs.github.com/zh/actions/learn-github-actions/understanding-github-actions)
 是 Github 为项目提供持续集成功能的一部分，私有项目每个月有 2000 分钟的执行时间配额，而公开项目则可以
 [不受时间限制](https://docs.github.com/zh/billing/managing-billing-for-github-actions/about-billing-for-github-action)
-的使用 GitHub Actions 执行任务。   
+的使用 GitHub Actions 执行任务。
 
-就像下单前肯定会找优惠券一样，作为一名薅过无数云服务的羊毛全栈开发，这免费的计算资源的勾起了我的觊觎已经很久了。 
+就像下单前肯定会找优惠券一样，作为一名薅过无数云服务的羊毛全栈开发，这免费的计算资源的勾起了我的觊觎已经很久了。
 
 GitHub Actions 任务运行时可以正常的访问网络资源，但它本身是不会被分配到公网 ip 的，这样就极大的限制了它的用途。
 根据不同的用途，接下来将详细介绍如何实现白嫖。
@@ -20,7 +17,7 @@ GitHub Actions 任务运行时可以正常的访问网络资源，但它本身�
 
 
 ### 风险警告
-***注意，本文仅从技术层面进行探讨各种可能实现方案从而帮助理解网络原理，请勿用于实际用途。***   
+***注意，本文仅从技术层面进行探讨各种可能实现方案从而帮助理解网络原理，请勿用于实际用途。***
 ***注意，GitHub 使用条款中明确声明 GitHub 可以[无理由封禁](https://docs.github.com/zh/site-policy/github-terms/github-terms-of-service#3-github-may-terminate)任何账户。***
 
 --------
@@ -33,7 +30,7 @@ GitHub Actions 任务运行时可以正常的访问网络资源，但它本身�
 ## 现在开始吧
 
 ### 示例
-#### 使用 Github Actions 代理上网 
+#### 使用 Github Actions 代理上网
 众所周知，代理请求上网对于连接和流量的消耗巨大。`Ngrok` 等一众工具不仅仅延迟高，而且被严格限制协议或者流量，明显它们已经无法适应新版本的环境，要寻找新的解决方案了。
 
 这里的方案选择的是组建
@@ -53,10 +50,10 @@ GitHub Actions 任务运行时可以正常的访问网络资源，但它本身�
 
 ##### 效果评测
 从连接效果上来看，无论和 ZeroTier 或者是 Tailscale 都能实现打洞直连不使用 relay 中转，实际网络性能测试可以达到 `250ms`/`50Mbps` 的水准，但延迟波动不稳定。
-![zero-tier](/assets/github-actions-free-rider/zero-tier.png)
-![tailscale.png](/assets/github-actions-free-rider/tailscale.png)
+![zero-tier](/github-actions-free-rider/zero-tier.png)
+![tailscale.png](/github-actions-free-rider/tailscale.png)
 
-![azure.jpg](/assets/github-actions-free-rider/azure-ip.jpg)
+![azure.jpg](/github-actions-free-rider/azure-ip.jpg)
 
 遗憾的是，这个方法是无法在移动端使用。尽管 zerotier 和 tailscale 有提供 App 客户端，但是它们运行时需要占用 VPN 功能来实现组网。
 

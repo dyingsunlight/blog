@@ -1,17 +1,13 @@
+<script lang="ts" setup>
+import DefaultContainer from "~/components/DefaultContainer.vue"
+</script>
+
 <template>
-  <main>
+  <default-container>
     <ContentList path="/" v-slot="{ list }">
       <div v-for="article in list" :key="article._path">
-        <h2>{{ article.title }}</h2>
         <NuxtLink :to="article._path">{{ article.title }}</NuxtLink>
-
       </div>
     </ContentList>
-  </main>
+  </default-container>
 </template>
-
-<script lang="ts" setup>
-definePageMeta({
-  name: "Home"
-})
-</script>

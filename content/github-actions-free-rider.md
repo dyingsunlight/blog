@@ -1,12 +1,14 @@
 ---
 layout: article
+date: 2023.4.16
+license: cc
 ---
 
 ## 序言
 简单概况来说
 [GitHub Actions](https://docs.github.com/zh/actions/learn-github-actions/understanding-github-actions)
 是 Github 为项目提供持续集成功能的一部分，私有项目每个月有 2000 分钟的执行时间配额，而公开项目则可以
-[不受时间限制](https://docs.github.com/zh/billing/managing-billing-for-github-actions/about-billing-for-github-action)
+[不受时间限制](https://docs.github.com/zh/billing/managing-billing-for-github-actions/about-billing-for-github-actions)
 的使用 GitHub Actions 执行任务。
 
 就像下单前肯定会找优惠券一样，作为一名薅过无数云服务的羊毛全栈开发，这免费的计算资源的勾起了我的觊觎已经很久了。

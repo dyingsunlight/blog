@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     documentDriven: true
   },
   css: [
-    "~/assets/normalize.css",
-    "~/assets/simple.css"
+    "~/assets/styles/normalize.css",
+    "~/assets/styles/simple/index.less"
   ]
 })

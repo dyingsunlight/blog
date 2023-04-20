@@ -1,0 +1,57 @@
+/* Format headers */
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+/* Prevent long strings from overflowing container */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Fix line height when title wraps */
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+/* Reduce header size on mobile */
+@media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,42 @@
+article {
+  h1, h2, h3, h4, h5, h6 {
+    a {
+      color: var(--text);
+
+      &:visited {
+        color: var(--text);
+        opacity: 0.8;
+      }
+    }
+  }
+}
+article, fieldset, dialog {
+  /*border: 1px solid var(--border);*/
+  //padding: 1rem;
+  //border-radius: var(--standard-border-radius);
+  margin-bottom: 1rem;
+}
+
+article h2:first-child,
+section h2:first-child {
+  margin-top: 1rem;
+}
+
+section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem 1rem;
+  margin: 3rem 0;
+}
+
+/* Don't double separators when chaining sections */
+section + section,
+section:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+section:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}

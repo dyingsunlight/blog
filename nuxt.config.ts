@@ -3,7 +3,16 @@ export default defineNuxtConfig({
     '@nuxt/content'
   ],
   content: {
-    documentDriven: true
+    documentDriven: true,
+  },
+  components: {
+    "dirs": [
+      {
+        "path": "~/components/Playgrounds",
+        "global": true
+      },
+      "~/components"
+    ],
   },
   css: [
     "~/assets/styles/normalize.css",

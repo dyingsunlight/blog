@@ -2,7 +2,7 @@
   <DefaultHeader></DefaultHeader>
   <hr>
   <main>
-    <ContentList path="/p" v-slot="{ list }">
+    <ContentList path="/articles" v-slot="{ list }">
       <ul>
         <li v-for="article in list" :key="article._path">
           <NuxtLink :to="article._path">{{ article.title }}</NuxtLink>

@@ -2,7 +2,7 @@
   <DefaultHeader></DefaultHeader>
   <hr>
   <main>
-    <ContentList path="/p" v-slot="{ list }">
+    <ContentList path="/articles/" v-slot="{ list }">
       <ul>
         <li v-for="article in list" :key="article._path">
           <NuxtLink :to="article._path">{{ article.title }}</NuxtLink>
@@ -14,16 +14,15 @@
     </ContentList>
   </main>
   <hr>
-  <footer>
-    <NuxtLink to="/about"> 关于 </NuxtLink>
-  </footer>
+  <DefaultFooter></DefaultFooter>
 </template>
 
 <style lang="less" scoped>
 main {
-  min-height: 5rem;
-}
-footer {
-  margin-top: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 </style>
+<script setup lang="ts">
+import DefaultFooter from "~/components/DefaultFooter.vue";
+</script>

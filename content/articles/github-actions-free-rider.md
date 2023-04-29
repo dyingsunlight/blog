@@ -1,5 +1,5 @@
 ---
-title: 论如何更好的充分白嫖 GitHub Actions 指南
+title: 如何白嫖 GitHub Actions 实现科学上网
 layout: article
 date: 2023.4.16
 license: cc

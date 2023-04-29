@@ -3,7 +3,9 @@
     <span class="primary">
       <NuxtLink to="/"> Edgest World </NuxtLink>
     </span>
-    <small class="byline"> nothing there. </small>
+    <small class="byline">
+      论如何使用代码释放魔法
+    </small>
   </header>
 </template>
 
@@ -17,7 +19,15 @@ header {
   margin: 0;
   padding: 0;
   font-size: 2rem;
-  color: #841212;
+  color: var(--accent);
+}
+@media only screen and (max-width: 720px) {
+  header {
+    padding: 16px 0;
+  }
+  .byline {
+    display: none;
+  }
 }
 
 .byline {

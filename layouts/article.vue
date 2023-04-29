@@ -1,25 +1,25 @@
-<script setup lang="ts">
-import DefaultHeader from "~/components/DefaultHeader.vue"
-import CCLicense from "~/components/CCLicense.vue"
-</script>
-
 <template>
-  <DefaultHeader></DefaultHeader>
-  <main>
-    <ContentDoc v-slot="{ doc }">
-      <h1>{{ doc.title }}</h1>
-      <time v-if="doc.date" datetime="{{ doc.date }}">{{ doc.date }}</time>
-      <hr />
-      <article>
-        <ContentRenderer :value="doc" />
-      </article>
-      <template v-if="doc.license === 'cc'">
+  <ContentDoc v-slot="{ doc, isHideFooter }">
+    <DefaultContainer>
+      <template #default>
+        <h1>{{ doc.title }}</h1>
+        <time v-if="doc.date" datetime="{{ doc.date }}">{{ doc.date }}</time>
         <hr />
-        <CCLicense></CCLicense>
-        <hr />
+        <article>
+          <ContentRenderer :value="doc" />
+        </article>
+        <template v-if="doc.license === 'cc'">
+          <hr />
+          <CCLicense></CCLicense>
+          <hr />
+        </template>
       </template>
-    </ContentDoc>
-  </main>
+      <template #footer>
+        <div v-if="doc.isHideFooter"></div>
+      </template>
+    </DefaultContainer>
+  </ContentDoc>
+
 </template>
 
 <style lang="less" scoped>

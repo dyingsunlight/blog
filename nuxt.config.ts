@@ -1,4 +1,7 @@
 export default defineNuxtConfig({
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
   modules: [
     '@nuxt/content',
     'nuxt-simple-sitemap',
